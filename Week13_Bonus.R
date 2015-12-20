@@ -58,6 +58,7 @@ for(i in 1:length(dollar_sign)){
 }
 old.par <- par(mar = c(0, 0, 0, 0))
 par(old.par)
+dev.new()
 df = data.frame(loc, sal)
 df$loc = factor(df$loc)
-boxplot(df$sal~df$loc, cex.axis=0.5)
+boxplot(df$sal~df$loc, cex.axis=0.5, main = "Salary Distribution to Location")
